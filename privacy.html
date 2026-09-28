@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7f8">
+  <meta name="description" content="趣游集隐私政策">
+  <title>趣游集隐私政策</title>
+  <style>
+    :root {
+      --ink: #25323a;
+      --body: #4b5962;
+      --muted: #7d8b94;
+      --faint: #a2adb4;
+      --green: #4dae68;
+      --green-dark: #2f7247;
+      --green-soft: #edf8ef;
+      --yellow: #f1bd2d;
+      --yellow-soft: #fff8da;
+      --blue: #2b94d6;
+      --blue-soft: #eef8ff;
+      --page: #f4f6f7;
+      --line: #e9edef;
+      --table-line: #dfe5e8;
+      --paper: #ffffff;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--page);
+      color: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.95;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--green-dark);
+    }
+
+    .app-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      min-height: 64px;
+      border-bottom: 1px solid rgba(221, 227, 230, .9);
+      background: rgba(244, 246, 247, .94);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .app-bar-inner {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr) 42px;
+      align-items: center;
+      gap: 12px;
+      width: min(100% - 32px, 860px);
+      min-height: 64px;
+      margin: 0 auto;
+    }
+
+    .back-button,
+    .bar-spacer {
+      width: 38px;
+      height: 38px;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e0e6e9;
+      border-radius: 12px;
+      color: #50606a;
+      background: rgba(255, 255, 255, .78);
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(83, 106, 119, .06);
+    }
+
+    .back-button::before {
+      width: 9px;
+      height: 9px;
+      border-bottom: 2px solid currentColor;
+      border-left: 2px solid currentColor;
+      transform: rotate(45deg) translate(2px, -1px);
+      content: "";
+    }
+
+    .back-button:focus-visible {
+      outline: 3px solid rgba(77, 174, 104, .28);
+      outline-offset: 2px;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-name {
+      overflow: hidden;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .brand-divider {
+      color: #b4bec3;
+      font-size: 14px;
+    }
+
+    .bar-title {
+      color: #56656e;
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .document-wrap {
+      width: min(100% - 32px, 860px);
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .paper {
+      padding: 38px 42px 42px;
+      border: 1px solid rgba(231, 236, 238, .96);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 18px 46px rgba(82, 103, 115, .09), 0 2px 8px rgba(82, 103, 115, .04);
+    }
+
+    .document-heading {
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .document-kicker {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
+
+    h1 {
+      margin: 0;
+      color: #1e292f;
+      font-size: clamp(28px, 4vw, 34px);
+      line-height: 1.35;
+      letter-spacing: .04em;
+    }
+
+    .document-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .intro {
+      margin: 0 0 18px;
+      color: var(--body);
+    }
+
+    .notice {
+      margin: 0 0 36px;
+      padding: 18px 20px 18px 22px;
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px 12px 12px 4px;
+      background: var(--yellow-soft);
+      color: #5d522b;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .notice strong {
+      color: #493c13;
+      font-weight: 700;
+    }
+
+    .section {
+      scroll-margin-top: 88px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 14px;
+      color: #202b31;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: .02em;
+    }
+
+    .section-title::before {
+      width: 5px;
+      min-width: 5px;
+      height: 30px;
+      border-radius: 1px;
+      background: var(--green);
+      content: "";
+    }
+
+    .sub-title {
+      margin: 22px 0 8px;
+      color: #35434b;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .clause {
+      margin: 0 0 12px;
+      color: var(--body);
+    }
+
+    .clause strong,
+    .sub-title strong {
+      color: #35434b;
+      font-weight: 700;
+    }
+
+    .list {
+      margin: 6px 0 14px;
+      padding-left: 1.35em;
+    }
+
+    .list li {
+      margin: 6px 0;
+      padding-left: 4px;
+    }
+
+    .list li::marker {
+      color: var(--green);
+      font-size: .9em;
+    }
+
+    .table-scroll {
+      width: 100%;
+      margin: 12px 0 18px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .privacy-table,
+    .service-table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      color: var(--body);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .privacy-table th,
+    .privacy-table td,
+    .service-table th,
+    .service-table td {
+      padding: 12px 13px;
+      border: 1px solid var(--table-line);
+      vertical-align: top;
+      text-align: left;
+      overflow-wrap: anywhere;
+    }
+
+    .privacy-table th,
+    .service-table th {
+      color: #34434b;
+      background: #f4f7f8;
+      font-weight: 700;
+    }
+
+    .privacy-table th:nth-child(1) { width: 18%; }
+    .privacy-table th:nth-child(2) { width: 29%; }
+    .privacy-table th:nth-child(3) { width: 38%; }
+    .privacy-table th:nth-child(4) { width: 15%; }
+    .service-table th:nth-child(1) { width: 23%; }
+    .service-table th:nth-child(2) { width: 32%; }
+    .service-table th:nth-child(3) { width: 45%; }
+
+    .table-note {
+      margin: -6px 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .info-box {
+      margin: 16px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--blue);
+      border-radius: 4px 12px 12px 4px;
+      background: var(--blue-soft);
+      color: #416174;
+    }
+
+    .info-box strong {
+      color: #2f5971;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border: 1px solid #d9eddd;
+      border-radius: 12px;
+      background: var(--green-soft);
+      color: #3f5948;
+    }
+
+    .contact-box a {
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .link-list {
+      margin: 8px 0 0;
+      padding-left: 1.35em;
+    }
+
+    .link-list li {
+      margin: 5px 0;
+    }
+
+    .link-list a {
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .document-end {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .document-end p {
+      margin-bottom: 6px;
+    }
+
+    .document-end p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .app-bar-inner,
+      .document-wrap {
+        width: min(100% - 24px, 860px);
+      }
+
+      .app-bar,
+      .app-bar-inner {
+        min-height: 58px;
+      }
+
+      .app-bar-inner {
+        grid-template-columns: 38px minmax(0, 1fr) 38px;
+      }
+
+      .back-button,
+      .bar-spacer {
+        width: 36px;
+        height: 36px;
+      }
+
+      .bar-title {
+        font-size: 14px;
+      }
+
+      .document-wrap {
+        padding-top: 12px;
+        padding-bottom: 36px;
+      }
+
+      .paper {
+        padding: 28px 20px 30px;
+        border-radius: 14px;
+      }
+
+      .document-heading {
+        margin-bottom: 24px;
+      }
+
+      .document-kicker {
+        font-size: 11px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .document-meta {
+        gap: 4px 16px;
+        font-size: 13px;
+      }
+
+      .notice {
+        margin-bottom: 28px;
+        padding: 14px 14px 14px 16px;
+        font-size: 14px;
+      }
+
+      .section + .section {
+        margin-top: 28px;
+      }
+
+      .section-title {
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .section-title::before {
+        width: 4px;
+        min-width: 4px;
+        height: 26px;
+      }
+
+      .sub-title {
+        margin-top: 18px;
+        font-size: 17px;
+      }
+
+      .list,
+      .link-list {
+        padding-left: 1.2em;
+      }
+
+      .privacy-table,
+      .service-table {
+        font-size: 13px;
+      }
+
+      .privacy-table th,
+      .privacy-table td,
+      .service-table th,
+      .service-table td {
+        padding: 10px 11px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .app-bar {
+        position: static;
+        border-bottom: 0;
+        background: #fff;
+      }
+
+      .back-button {
+        display: none;
+      }
+
+      .app-bar-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-spacer {
+        display: none;
+      }
+
+      .document-wrap {
+        width: 100%;
+        padding: 0;
+      }
+
+      .paper {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .table-scroll {
+        overflow: visible;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a class="back-button" href="index.html" aria-label="返回趣游集首页" title="返回趣游集首页"></a>
+      <div class="brand-title">
+        <span class="brand-name">趣游集</span>
+        <span class="brand-divider" aria-hidden="true">·</span>
+        <span class="bar-title">隐私政策</span>
+      </div>
+      <span class="bar-spacer" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="document-wrap">
+    <article class="paper">
+      <header class="document-heading">
+        <p class="document-kicker">QUYOUJI · PRIVACY POLICY</p>
+        <h1>趣游集隐私政策</h1>
+        <div class="document-meta">
+          <span>更新日期：2026年9月28日</span>
+          <span>生效日期：2026年9月28日</span>
+        </div>
+      </header>
+
+      <p class="intro">趣游集应用的开发者及运营者（以下简称“我们”）重视你的隐私和个人信息安全。本政策适用于趣游集移动应用、应用内页面以及与应用相关的云函数、会员服务和客户支持，说明我们处理哪些信息、为何处理、如何保存和保护信息，以及你如何行使相关权利。开发者及运营者主体信息以 App Store 产品页面及应用内展示的信息为准。</p>
+
+      <aside class="notice">
+        <strong>重要提示：</strong>当前版本以本地轻游戏为主，昵称、玩家标识、积分、游玩记录和游戏进度主要保存在你的设备本地。未来开通 Apple 会员、恢复购买或云端用户表后，为核验交易和维护会员状态，相关必要信息可能通过网络传输并保存在云端。当前版本未接入第三方广告、行为分析或社交登录 SDK，不使用 IDFA 进行广告跟踪，也不会主动申请通讯录、精确位置、相机、麦克风或健康数据权限。请同时阅读<a href="user-agreement.html">《趣游集用户协议》</a>。</aside>
+
+      <section class="section" id="scope">
+        <h2 class="section-title">一、适用范围与处理原则</h2>
+        <p class="clause"><strong>1.1</strong> 本政策适用于你使用趣游集的小游戏、个人中心、会员页面、成绩单或系统分享、反馈与客户支持，以及未来可能开通的账号、云同步和 Apple 会员服务。</p>
+        <p class="clause"><strong>1.2</strong> 我们遵循目的明确、最小必要、公开透明和安全保障原则，仅在提供对应功能、履行合同或法律义务、保障服务安全，或取得你必要同意的范围内处理个人信息。</p>
+        <p class="clause"><strong>1.3</strong> Apple App Store、系统分享、邮件服务商、云基础设施或其他第三方服务可能独立处理相关信息。对于第三方服务的处理行为，请同时阅读其隐私政策和服务规则。</p>
+      </section>
+
+      <section class="section" id="collection">
+        <h2 class="section-title">二、我们如何收集和使用信息</h2>
+        <h3 class="sub-title">2.1 信息处理清单</h3>
+        <p class="clause">以下清单按照趣游集当前功能和计划接入的会员服务列出可能处理的信息。具体以你实际使用的版本和功能为准；未使用的功能不会因此自动收集对应信息。</p>
+        <div class="table-scroll">
+          <table class="privacy-table">
+            <thead>
+              <tr>
+                <th>使用场景</th>
+                <th>可能涉及的信息</th>
+                <th>处理目的与方式</th>
+                <th>是否必要</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>应用初始化与本机玩家</td>
+                <td>应用生成的随机本机玩家 ID、昵称、应用版本、操作系统版本、语言和地区等基础环境信息</td>
+                <td>在设备本地创建和识别本机玩家，展示昵称、保存偏好；联网服务开启后，可用于识别同一安装环境、下发配置和保障服务安全</td>
+                <td>基础功能必要；联网字段按功能需要</td>
+              </tr>
+              <tr>
+                <td>训练与益智游戏</td>
+                <td>游戏名称、关卡、分数、正确率、耗时、历史最佳、积分、游玩次数、游玩时长、进度、收藏和设置</td>
+                <td>保存和展示成绩、恢复游戏进度、生成成绩单和改进本地体验；当前版本主要使用应用本地存储</td>
+                <td>使用对应功能时必要</td>
+              </tr>
+              <tr>
+                <td>会员购买与恢复</td>
+                <td>趣游集用户 ID、商品 ID、Apple 交易标识、原始交易标识、购买时间、订阅到期时间、续费状态、退款或撤销状态、交易凭证或验证结果</td>
+                <td>通过 Apple 返回或签发的交易信息核验月度订阅和一次性永久会员，写入云端用户表，开通、恢复、更新或收回会员权益</td>
+                <td>购买或恢复会员时必要</td>
+              </tr>
+              <tr>
+                <td>建议反馈与客服</td>
+                <td>你主动提供的邮箱、用户 ID、订单号、问题描述、截图或其他反馈内容</td>
+                <td>接收和回复问题、核验订单、排查故障、处理投诉并改进产品；仅在你主动联系时处理</td>
+                <td>主动提交时必要</td>
+              </tr>
+              <tr>
+                <td>网络请求与安全</td>
+                <td>IP 地址、请求时间、请求接口、网络连接状态、应用和设备环境、响应结果及必要的错误日志</td>
+                <td>在联网请求时自动产生，用于传输内容、识别异常请求、防止滥用、定位故障和保障云函数及会员服务稳定</td>
+                <td>使用联网功能时必要</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">表格中的“Apple 交易标识”用于订单真实性和会员归属核验，不包含 Apple 账户密码、银行卡号或完整支付信息。</p>
+
+        <h3 class="sub-title">2.2 本地游戏数据</h3>
+        <p class="clause">趣游集会在设备本地保存昵称、本机玩家 ID、积分、对局记录、历史最佳、最近游玩、游戏进度、游玩统计和相关设置，用于展示成绩、恢复进度和提供个性化体验。当前版本不会将这些详细游戏记录主动上传到服务器。卸载应用、清除应用数据或设备故障可能导致本地记录无法恢复。</p>
+
+        <h3 class="sub-title">2.3 本机玩家标识与设备环境</h3>
+        <p class="clause">应用可能生成随机本机玩家 ID，用于关联本地记录。未来为提供云端会员核验、恢复购买和安全保障，实际版本可能处理应用版本、操作系统版本、设备型号、系统语言、地区以及系统提供的应用级标识（例如 iOS 的 IDFV）。我们不会读取或使用 IDFA 进行广告投放、跨应用跟踪或用户画像。</p>
+
+        <h3 class="sub-title">2.4 可选功能</h3>
+        <ul class="list">
+          <li><strong>会员购买与恢复：</strong>仅在你主动购买或选择恢复购买时处理必要的 Apple 交易信息，不会获得 Apple 账户密码或完整支付卡信息。</li>
+          <li><strong>反馈与客服：</strong>仅处理你主动填写和发送的联系方式、问题描述和附件内容；请勿在邮件或反馈中提交密码、验证码、身份证件原件或完整支付凭证。</li>
+          <li><strong>头像或图片功能：</strong>当前版本不主动读取相册或拍摄照片。若未来版本提供本地头像选择、成绩图片保存等功能，我们会在具体场景说明用途并按需申请照片或文件权限。</li>
+        </ul>
+
+        <h3 class="sub-title">2.5 无需另行取得同意的情形</h3>
+        <p class="clause">根据适用法律法规，在订立或履行你作为一方当事人的合同所必需、履行法定义务、应对突发公共卫生事件、保护自然人生命健康和财产安全，或在法律允许范围内处理你自行公开或已经合法公开的信息等情形下，我们可能无需另行取得同意，但仍会依法控制处理范围并采取安全保护措施。</p>
+      </section>
+
+      <section class="section" id="permissions">
+        <h2 class="section-title">三、系统权限说明</h2>
+        <p class="clause">趣游集仅在对应功能需要时使用系统能力，并尽量避免申请不必要的权限：</p>
+        <ul class="list">
+          <li><strong>网络访问：</strong>用于加载云端配置、会员购买或恢复、Apple 交易核验、反馈提交和安全请求。拒绝或关闭网络后，离线游戏仍可能可用，但联网会员和反馈功能可能无法使用。</li>
+          <li><strong>照片或文件权限：</strong>当前版本不主动申请。若未来开放头像或成绩图片功能，仅在你主动触发并授权后访问你选择的照片或文件，拒绝权限不影响基础游戏。</li>
+          <li><strong>通知权限：</strong>当前版本不会因基础游戏主动申请通知权限。若未来提供到期提醒或服务通知，会在申请前说明用途，并由你决定是否授权。</li>
+        </ul>
+        <p class="clause">当前版本不会主动申请通讯录、短信、通话记录、精确位置、相机、麦克风、健康数据或生物识别权限。应用内声音训练或提示仅播放内置音频，不会录制环境声音。</p>
+      </section>
+
+      <section class="section" id="storage">
+        <h2 class="section-title">四、本地存储与 Cookie</h2>
+        <p class="clause"><strong>4.1</strong> 应用使用系统本地存储和应用沙盒保存游戏记录、昵称、本机玩家 ID、游戏进度、功能状态和必要的隐私政策阅读状态。随机本机玩家 ID 可能由系统安全存储能力保护。你可以在应用“个人中心”清除本地数据，或通过系统设置清除应用数据。</p>
+        <p class="clause"><strong>4.2</strong> 清除本地数据或卸载应用可能删除设备上的游戏记录、积分、进度和昵称，但不会自动取消 Apple 月度自动续费，也不当然删除为会员核验、订单处理和法律合规而保留的云端记录。会员云端数据的删除、匿名化和保留以本政策及适用法律法规为准。</p>
+        <p class="clause"><strong>4.3</strong> 趣游集原生应用当前不主动设置 Cookie，也未接入第三方广告或行为分析脚本。本 HTML 政策页面本身不包含跟踪脚本；如果页面由托管服务提供，托管方可能为传输、安全和基础运维自动生成标准网络日志。</p>
+      </section>
+
+      <section class="section" id="third-party">
+        <h2 class="section-title">五、委托处理、共享与公开披露</h2>
+        <h3 class="sub-title">5.1 第三方服务</h3>
+        <p class="clause">为实现会员交易、云端核验、基础网络和客户支持，我们可能在最小必要范围内使用以下服务或接收方。具体服务名称和数据范围以实际接入版本为准。</p>
+        <div class="table-scroll">
+          <table class="service-table">
+            <thead>
+              <tr>
+                <th>服务或接收方</th>
+                <th>涉及的信息</th>
+                <th>用途与说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apple App Store / StoreKit</td>
+                <td>商品 ID、交易与订阅状态、Apple 交易数据、交易凭证或验证结果</td>
+                <td>发起购买、扣款、订阅管理、订单验证和恢复购买。Apple 同时按照其隐私政策处理相关信息。</td>
+              </tr>
+              <tr>
+                <td>趣游集云函数与云数据库（计划接入）</td>
+                <td>趣游集用户 ID、Apple 交易标识、商品标识、会员有效期、续费、退款或撤销状态、必要安全日志</td>
+                <td>核验 Apple 交易、维护云端用户表、同步会员状态、处理恢复购买和防止重复或欺诈使用。仅处理实现目的所需的信息。</td>
+              </tr>
+              <tr>
+                <td>邮件或客户支持服务</td>
+                <td>你主动提供的邮箱、问题描述、订单信息和附件</td>
+                <td>接收反馈、回复咨询、核验会员订单和处理数据权利请求。</td>
+              </tr>
+              <tr>
+                <td>系统分享与设备服务</td>
+                <td>你主动选择分享的成绩单、文字、图片或链接</td>
+                <td>由你决定接收对象和范围。分享后，第三方如何处理内容受其自身规则和隐私政策约束。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="clause"><strong>5.2 共享：</strong>除上述实现功能所必需的处理外，我们不会出售、出租或以交易方式提供你的个人信息，也不会将其与无关公司、组织或个人共享。发生以下情形时，我们可能依法共享必要信息：</p>
+        <ul class="list">
+          <li>已取得你的单独同意或明确授权；</li>
+          <li>为履行你主动选择的服务、处理 Apple 交易、解决争议或提供客户支持所必需；</li>
+          <li>根据法律法规、司法程序、行政机关或有权机关依法提出的要求；</li>
+          <li>在法律允许范围内，为保护你、其他用户、我们或公众的生命健康、财产和其他重大合法权益所必需。</li>
+        </ul>
+        <p class="clause"><strong>5.3 转让：</strong>我们不会转让你的个人信息。若发生合并、分立、收购、资产转让或类似交易并涉及个人信息转移，我们会依法告知接收方、处理目的和方式，并要求接收方继续受本政策约束；接收方改变原处理目的或方式的，将依法重新取得你的同意。</p>
+        <p class="clause"><strong>5.4 公开披露：</strong>我们原则上不会公开披露你的个人信息。确需公开披露时，我们会依法告知披露目的、信息类型和可能影响，并在法律要求时取得你的单独同意。</p>
+        <div class="info-box"><strong>第三方政策：</strong>Apple 的隐私政策可在 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple 隐私政策</a> 查看。第三方服务会按照其自身规则处理信息，请你同时阅读相关说明。</div>
+      </section>
+
+      <section class="section" id="retention">
+        <h2 class="section-title">六、信息保存地点与期限</h2>
+        <p class="clause"><strong>6.1 设备本地数据：</strong>训练记录、历史最佳、积分、游玩统计、进度、昵称和设置主要保存在你的设备中，通常持续保存至你在应用内清除相应内容、清除应用数据或卸载应用。随机本机玩家 ID 可能在系统安全存储中保留，具体取决于操作系统。</p>
+        <p class="clause"><strong>6.2 云端会员数据：</strong>计划接入会员后，趣游集用户标识、会员状态、Apple 交易验证结果和必要服务记录会保存在云函数及云数据库中，保存至实现会员核验、订单处理、客服和安全目的所需的最短期限，或至你注销账户、提出合法删除请求。法律法规要求继续保存的，我们会在法定期限和目的范围内保留，并采取访问限制。</p>
+        <p class="clause"><strong>6.3 交易与反馈：</strong>Apple 交易验证记录按照购买、退款处理、争议解决和法律义务所需期限保存；反馈内容和联系方式通常保存至问题处理完成及必要的后续核查期限。网络安全日志仅在定位故障、防止滥用和履行法律义务所需期限内保存。</p>
+        <p class="clause"><strong>6.4 存储地点和跨境：</strong>设备本地数据保存在你的设备中。Apple、云基础设施或邮件服务商可能根据其全球服务架构在不同国家或地区处理相关信息；如发生跨境提供，我们会依据适用法律履行告知、评估、合同或其他必要程序，并采取相应保护措施。</p>
+      </section>
+
+      <section class="section" id="security">
+        <h2 class="section-title">七、我们如何保护信息</h2>
+        <p class="clause"><strong>7.1</strong> 我们会采取与信息风险相匹配的技术和管理措施，包括应用沙盒和本地访问隔离、云端访问控制、必要的传输加密、最小权限、订单核验、操作记录和安全事件响应等。实际措施会随服务版本和基础设施调整。</p>
+        <p class="clause"><strong>7.2</strong> 互联网和设备环境不存在绝对安全。请妥善保管设备、Apple 账户、邮箱和验证码，不要向任何人泄露密码、短信验证码、Apple 账户凭据或完整交易凭证。发现疑似信息泄露、异常扣款或会员状态异常时，请立即联系我们。</p>
+        <p class="clause"><strong>7.3</strong> 如发生个人信息安全事件，我们会按照适用法律采取补救、报告和通知措施，并在法律要求的范围内向你说明事件影响、已采取措施和可行的自我保护建议。</p>
+      </section>
+
+      <section class="section" id="rights">
+        <h2 class="section-title">八、你的个人信息权利</h2>
+        <h3 class="sub-title">8.1 访问、更正与复制</h3>
+        <p class="clause">你可以在应用内查看本机玩家 ID、昵称、会员状态（如已接入）、本地游戏记录和进度，并修改昵称或删除可编辑内容。对于无法在应用内直接访问、更正或复制的云端会员信息，你可以通过本政策末尾的邮箱联系我们。</p>
+
+        <h3 class="sub-title">8.2 删除信息</h3>
+        <p class="clause">你可以通过以下方式删除信息：</p>
+        <ul class="list">
+          <li>在个人中心清除本地数据，删除设备上的积分、记录、进度、昵称和相关缓存；</li>
+          <li>卸载应用或通过系统设置清除应用数据，删除设备本地数据；</li>
+          <li>通过邮件提出云端用户记录、会员核验记录或反馈信息的合法删除请求；</li>
+          <li>在法律允许的范围内，要求我们对不再需要的信息进行删除或匿名化处理。</li>
+        </ul>
+        <p class="clause">请注意，卸载应用不等同于注销云端会员记录，也不会自动取消 Apple 月度自动续费。为履行交易、财务、争议处理或其他法定义务而必须保留的信息，我们会在法定期限届满后删除或匿名化。</p>
+
+        <h3 class="sub-title">8.3 撤回授权与限制处理</h3>
+        <p class="clause">你可以在系统设置中关闭已授予的照片、文件或通知权限，也可以停止使用对应功能。撤回授权不会影响撤回前基于授权开展处理的合法性，但可能导致相关功能无法使用。对于以履行服务或法定义务为依据的必要处理，撤回同意不一定能够停止处理。</p>
+
+        <h3 class="sub-title">8.4 注销与请求响应</h3>
+        <p class="clause">当前版本主要使用本机玩家模式。未来开通云端用户后，你可以通过应用内功能或本政策末尾的邮箱申请注销、解绑或删除云端账户关联。为保护安全，我们可能要求提供用户 ID、绑定信息、Apple 交易信息或其他能够证明请求归属的材料，但不会要求你提供密码或完整支付信息。我们通常会在收到完整、合理的请求后 15 个工作日内回复；复杂或需要核验的请求可能依法延长，并向你说明原因。</p>
+      </section>
+
+      <section class="section" id="minor">
+        <h2 class="section-title">九、未成年人保护</h2>
+        <p class="clause"><strong>9.1</strong> 未满18周岁的用户应在监护人指导下阅读并使用趣游集；未满14周岁的儿童应事先取得监护人同意，并在监护人陪同下使用，不应自行购买会员或提交不必要的个人信息。</p>
+        <p class="clause"><strong>9.2</strong> 我们不会明知且故意诱导儿童提交与产品功能无关的个人信息。监护人如发现儿童未经同意向我们提供信息，可以通过本政策末尾的邮箱联系我们，我们会在核验后依法处理。</p>
+        <p class="clause"><strong>9.3</strong> 监护人应帮助未成年人合理控制使用时间，妥善保管 Apple 账户和支付验证方式，并提醒其不要在系统分享、反馈或邮件中披露本人及他人的隐私。</p>
+      </section>
+
+      <section class="section" id="cross-border">
+        <h2 class="section-title">十、跨境处理</h2>
+        <p class="clause"><strong>10.1</strong> Apple、邮件服务、云函数或网络基础设施可能根据其全球服务安排在不同国家或地区处理相关信息。不同接收方的处理地点、保存期限和保护措施可能不同，请同时阅读其隐私政策。</p>
+        <p class="clause"><strong>10.2</strong> 如我们直接向境外接收方提供个人信息，并且适用法律要求履行告知、取得单独同意、签订标准合同、完成安全评估或其他程序，我们会在处理前完成相应程序并采取必要的保护措施。</p>
+      </section>
+
+      <section class="section" id="updates">
+        <h2 class="section-title">十一、本政策如何更新</h2>
+        <p class="clause"><strong>11.1</strong> 我们可能根据产品功能、会员服务、法律法规、平台规则或信息处理方式变化更新本政策，并在本页面标注最新更新日期和生效日期。</p>
+        <p class="clause"><strong>11.2</strong> 对于处理目的、信息类型、共享对象、保存期限、跨境安排或你的权利产生重大影响的变化，我们会通过应用内提示、页面公告或其他合理方式向你说明，并在法律要求时重新取得你的同意。</p>
+        <p class="clause"><strong>11.3</strong> 如果你不同意更新后的政策，可以停止使用相关功能；更新生效后继续使用趣游集的，表示你已阅读并理解更新后的内容。对于法律要求单独同意的事项，我们不会仅以继续使用替代单独同意。</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2 class="section-title">十二、联系我们</h2>
+        <p class="clause"><strong>12.1</strong> 个人信息处理者为趣游集应用的开发者及运营者，具体主体信息以 App Store 产品页面及应用内展示的信息为准。</p>
+        <p class="clause"><strong>12.2</strong> 如你对本政策有疑问、投诉、建议，或希望行使访问、更正、复制、删除、撤回同意、注销账户、会员状态核验等权利，请联系我们：</p>
+        <div class="contact-box">
+          隐私与客服邮箱：<a href="mailto:913111480@qq.com">913111480@qq.com</a><br>
+          请在邮件中说明问题和趣游集用户 ID（如有），不要发送密码、短信验证码、身份证件原件、Apple 账户密码或完整支付凭证。
+        </div>
+        <p class="clause"><strong>12.3</strong> 我们会在完成必要的身份和请求核验后依法处理你的请求。对于重复提交、缺乏必要信息、超出合理技术范围、可能损害他人合法权益或法律允许拒绝的请求，我们可能依法说明理由并拒绝。</p>
+      </section>
+
+      <footer class="document-end">
+        <p>感谢你关注趣游集的隐私保护。</p>
+        <p>我们会持续以清晰、必要和安全的方式处理信息。</p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
