@@ -1,0 +1,575 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7f8">
+  <meta name="description" content="趣游集用户协议">
+  <title>趣游集用户协议</title>
+  <style>
+    :root {
+      --ink: #25323a;
+      --body: #4b5962;
+      --muted: #7d8b94;
+      --faint: #a2adb4;
+      --green: #4dae68;
+      --green-dark: #2f7247;
+      --green-soft: #edf8ef;
+      --yellow: #f1bd2d;
+      --yellow-soft: #fff8da;
+      --page: #f4f6f7;
+      --line: #e9edef;
+      --paper: #ffffff;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--page);
+      color: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.95;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--green-dark);
+    }
+
+    .app-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      min-height: 64px;
+      border-bottom: 1px solid rgba(221, 227, 230, .9);
+      background: rgba(244, 246, 247, .94);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .app-bar-inner {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr) 42px;
+      align-items: center;
+      gap: 12px;
+      width: min(100% - 32px, 860px);
+      min-height: 64px;
+      margin: 0 auto;
+    }
+
+    .back-button,
+    .bar-spacer {
+      width: 38px;
+      height: 38px;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e0e6e9;
+      border-radius: 12px;
+      color: #50606a;
+      background: rgba(255, 255, 255, .78);
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(83, 106, 119, .06);
+    }
+
+    .back-button::before {
+      width: 9px;
+      height: 9px;
+      border-bottom: 2px solid currentColor;
+      border-left: 2px solid currentColor;
+      transform: rotate(45deg) translate(2px, -1px);
+      content: "";
+    }
+
+    .back-button:focus-visible {
+      outline: 3px solid rgba(77, 174, 104, .28);
+      outline-offset: 2px;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-name {
+      overflow: hidden;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .brand-divider {
+      color: #b4bec3;
+      font-size: 14px;
+    }
+
+    .bar-title {
+      color: #56656e;
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .document-wrap {
+      width: min(100% - 32px, 860px);
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .paper {
+      padding: 38px 42px 42px;
+      border: 1px solid rgba(231, 236, 238, .96);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 18px 46px rgba(82, 103, 115, .09), 0 2px 8px rgba(82, 103, 115, .04);
+    }
+
+    .document-heading {
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .document-kicker {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
+
+    h1 {
+      margin: 0;
+      color: #1e292f;
+      font-size: clamp(28px, 4vw, 34px);
+      line-height: 1.35;
+      letter-spacing: .04em;
+    }
+
+    .document-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .notice {
+      margin: 0 0 36px;
+      padding: 18px 20px 18px 22px;
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px 12px 12px 4px;
+      background: var(--yellow-soft);
+      color: #5d522b;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .notice strong {
+      color: #493c13;
+      font-weight: 700;
+    }
+
+    .section {
+      scroll-margin-top: 88px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 14px;
+      color: #202b31;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: .02em;
+    }
+
+    .section-title::before {
+      width: 5px;
+      min-width: 5px;
+      height: 30px;
+      border-radius: 1px;
+      background: var(--green);
+      content: "";
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .clause {
+      margin: 0 0 12px;
+      color: var(--body);
+    }
+
+    .clause strong {
+      color: #35434b;
+      font-weight: 700;
+    }
+
+    .list {
+      margin: 6px 0 14px;
+      padding-left: 1.35em;
+    }
+
+    .list li {
+      margin: 6px 0;
+      padding-left: 4px;
+    }
+
+    .list li::marker {
+      color: var(--green);
+      font-size: .9em;
+    }
+
+    .contact-box {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border: 1px solid #d9eddd;
+      border-radius: 12px;
+      background: var(--green-soft);
+      color: #3f5948;
+    }
+
+    .contact-box a {
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .document-end {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .document-end p {
+      margin-bottom: 6px;
+    }
+
+    .document-end p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .app-bar-inner,
+      .document-wrap {
+        width: min(100% - 24px, 860px);
+      }
+
+      .app-bar,
+      .app-bar-inner {
+        min-height: 58px;
+      }
+
+      .app-bar-inner {
+        grid-template-columns: 38px minmax(0, 1fr) 38px;
+      }
+
+      .back-button,
+      .bar-spacer {
+        width: 36px;
+        height: 36px;
+      }
+
+      .bar-title {
+        font-size: 14px;
+      }
+
+      .document-wrap {
+        padding-top: 12px;
+        padding-bottom: 36px;
+      }
+
+      .paper {
+        padding: 28px 20px 30px;
+        border-radius: 14px;
+      }
+
+      .document-heading {
+        margin-bottom: 24px;
+      }
+
+      .document-kicker {
+        font-size: 11px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .document-meta {
+        gap: 4px 16px;
+        font-size: 13px;
+      }
+
+      .notice {
+        margin-bottom: 28px;
+        padding: 14px 14px 14px 16px;
+        font-size: 14px;
+      }
+
+      .section + .section {
+        margin-top: 28px;
+      }
+
+      .section-title {
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .section-title::before {
+        width: 4px;
+        min-width: 4px;
+        height: 26px;
+      }
+
+      .list {
+        padding-left: 1.2em;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .app-bar {
+        position: static;
+        border-bottom: 0;
+        background: #fff;
+      }
+
+      .back-button {
+        display: none;
+      }
+
+      .app-bar-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-spacer {
+        display: none;
+      }
+
+      .document-wrap {
+        width: 100%;
+        padding: 0;
+      }
+
+      .paper {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a class="back-button" href="/" aria-label="返回趣游集首页" title="返回趣游集首页"></a>
+      <div class="brand-title">
+        <span class="brand-name">趣游集</span>
+        <span class="brand-divider" aria-hidden="true">·</span>
+        <span class="bar-title">用户协议</span>
+      </div>
+      <span class="bar-spacer" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="document-wrap">
+    <article class="paper">
+      <header class="document-heading">
+        <p class="document-kicker">QUYOUJI · USER AGREEMENT</p>
+        <h1>趣游集用户协议</h1>
+        <div class="document-meta">
+          <span>更新日期：2026年9月28日</span>
+          <span>生效日期：2026年9月28日</span>
+        </div>
+      </header>
+
+      <aside class="notice">
+        <strong>重要提示：</strong>请在下载、安装、启动或使用“趣游集”前认真阅读并充分理解本协议，特别是与服务范围、会员购买、责任限制、未成年人保护和争议解决有关的条款。你开始或继续使用趣游集，即表示你已阅读、理解并同意本协议及与个人信息处理有关的《隐私政策》。如你不同意，请停止使用相关服务。
+      </aside>
+
+      <section class="section" id="scope">
+        <h2 class="section-title">一、协议主体与适用范围</h2>
+        <p class="clause"><strong>1.1</strong> 本协议由趣游集应用的开发者及运营者（以下简称“我们”）与你共同订立。趣游集是面向移动设备提供轻量休闲游戏和游玩记录功能的应用。</p>
+        <p class="clause"><strong>1.2</strong> 本协议适用于趣游集应用、应用内页面以及我们向你提供的相关功能、内容和客户支持。涉及个人信息处理的内容，另行适用《隐私政策》；涉及具体付费项目的内容，以购买页面展示的规则为准。</p>
+        <p class="clause"><strong>1.3</strong> 应用内针对特定功能发布的规则、说明、提示、活动页面和购买页面均构成本协议的一部分。若特定规则与本协议对同一事项有更明确的约定，以该特定规则为准；法律法规另有规定的，从其规定。</p>
+      </section>
+
+      <section class="section" id="service">
+        <h2 class="section-title">二、产品与服务说明</h2>
+        <p class="clause"><strong>2.1</strong> 趣游集主要提供以下服务：</p>
+        <ul class="list">
+          <li>记忆、反应、益智、文字、棋类及其他轻量休闲游戏；</li>
+          <li>游戏关卡、难度选择、对局结果、历史最佳、积分和游玩次数等记录功能；</li>
+          <li>本机昵称、本机玩家标识、最近游玩和本地游戏进度等个性化功能；</li>
+          <li>成绩单保存、系统分享或其他由当前版本支持的辅助功能；</li>
+          <li>会员服务，包括月度自动续费订阅和一次性买断型永久会员，具体权益以会员购买页面为准。</li>
+        </ul>
+        <p class="clause"><strong>2.2</strong> 趣游集的具体游戏、玩法、界面、支持的设备和系统版本，以你实际使用的应用版本为准。部分功能可能需要网络连接、系统权限或第三方平台能力；你拒绝相关权限时，可能无法使用对应功能，但不影响其他无需该权限的功能。</p>
+        <p class="clause"><strong>2.3</strong> 游戏中的分数、排名、反应时间、能力提示和训练建议仅用于记录及展示你在应用内的表现，不是标准化智力测试或专业能力测评，不构成医疗诊断、治疗、康复、教育评价或其他专业意见。请勿据此替代专业机构的判断。</p>
+      </section>
+
+      <section class="section" id="account">
+        <h2 class="section-title">三、用户标识与使用准备</h2>
+        <p class="clause"><strong>3.1</strong> 为提供本机玩家标识、记录归属、会员权益验证、购买恢复、客户服务和安全保障，应用可能在首次启动或使用相关功能时为你生成或关联趣游集用户标识。使用基础游戏通常无需提供手机号码或设置传统密码；如某个版本提供登录、绑定或同步功能，以该版本的页面说明为准。</p>
+        <p class="clause"><strong>3.2</strong> 你应妥善保管使用趣游集的设备、Apple 账户及设备解锁信息，不得通过出售、出租、出借、共享设备或其他方式允许他人冒用你的身份使用服务。因设备丢失、系统重置、卸载应用、清除应用数据或无法证明购买归属造成的本地记录或会员权益恢复问题，由你自行承担相应风险。</p>
+        <p class="clause"><strong>3.3</strong> 你设置的昵称、头像或其他展示信息（如当前版本支持）不得冒用他人身份，不得侵犯他人的肖像权、名誉权、隐私权、知识产权或其他合法权益，也不得含有法律法规禁止的内容。</p>
+        <p class="clause"><strong>3.4</strong> 你应使用官方或合法渠道获取趣游集，并保证设备、操作系统和网络环境满足应用运行要求。通过未经授权的修改包、插件或其他渠道使用应用，可能带来安全风险或导致相关功能无法正常运行。</p>
+      </section>
+
+      <section class="section" id="rules">
+        <h2 class="section-title">四、使用规则</h2>
+        <p class="clause"><strong>4.1</strong> 你使用趣游集时应遵守适用的法律法规、公序良俗和本协议，不得实施以下行为：</p>
+        <ul class="list">
+          <li>利用应用制作、提交、传播违法、有害、侵权、欺诈、骚扰或其他不当内容；</li>
+          <li>冒用他人身份，非法获取或使用他人的设备、账号、验证码、交易凭证或个人信息；</li>
+          <li>通过外挂、脚本、自动化工具、篡改客户端、修改本地数据或其他不正当方式干扰游戏结果、记录或服务运行；</li>
+          <li>绕过技术保护措施，恶意抓取数据，攻击或扫描服务，传播病毒、木马或其他恶意程序；</li>
+          <li>未经授权复制、修改、反向工程、反编译、反汇编、出租、出售、转授权应用或其中的内容；</li>
+          <li>将趣游集用于未经许可的商业推广、批量运营、竞赛博彩或其他违法商业用途；</li>
+          <li>实施其他违反法律法规、本协议或损害他人合法权益的行为。</li>
+        </ul>
+        <p class="clause"><strong>4.2</strong> 如你违反本协议，我们可根据行为性质和影响程度采取提示、限制相关功能、暂停服务、停止提供支持、删除相关内容或其他必要措施；法律法规要求的，我们会依法保存必要记录并向有关主管部门提供协助。我们会在合理范围内说明处理原因，并依法保障你的申诉和反馈权利。</p>
+      </section>
+
+      <section class="section" id="data">
+        <h2 class="section-title">五、游戏数据与用户提供的内容</h2>
+        <p class="clause"><strong>5.1</strong> 昵称、积分、历史最佳、对局记录、最近游玩、游戏进度及相关偏好主要保存在你的设备本地。为开通、验证、恢复和管理会员服务，应用可能将趣游集用户标识、Apple 交易标识、商品标识、购买状态、订阅到期时间、退款或撤销状态等必要信息同步至云端用户记录。我们无法保证设备故障、系统升级、卸载应用、清除应用数据、网络异常或其他不可控情形下本地数据一定能够保留或恢复，请你根据设备能力自行做好备份。</p>
+        <p class="clause"><strong>5.2</strong> 当你使用系统分享、保存成绩单或其他向第三方发送内容的功能时，你应自行确认分享对象和分享范围。分享后，第三方如何保存、使用或传播相关内容，受其自身规则和隐私政策约束。</p>
+        <p class="clause"><strong>5.3</strong> 你主动向我们提交的建议、问题反馈、评价或其他内容，其知识产权仍归你或原权利人所有。你同意我们在处理问题、改进产品、进行安全分析和回复你的必要范围内使用该等内容，但该授权不改变你对原始内容依法享有的权利。</p>
+      </section>
+
+      <section class="section" id="membership">
+        <h2 class="section-title">六、会员、购买与退款</h2>
+        <p class="clause"><strong>6.1</strong> 趣游集会员包括以下两种方案，具体商品名称、价格、税费、权益范围、支持的设备和购买资格以应用内会员购买页面及 Apple App Store 展示为准：</p>
+        <ul class="list">
+          <li><strong>月度自动续费订阅：</strong>按一个月为一个订阅周期。你确认购买后，Apple 会按照 App Store 规则在每个周期结束前自动续费并从你的 Apple 账户扣款，除非你按照 Apple 的指引关闭自动续费或订阅因其他原因终止。</li>
+          <li><strong>一次性买断型永久会员：</strong>属于一次性购买的非消耗型 App 内购买项目，支付成功后不设置到期日、不自动续费、不产生周期性扣款。这里的“永久”是指在趣游集持续提供相应会员服务期间持续有效，不代表应用永远不变、所有未来功能永久不变或服务终止后仍可继续使用。</li>
+        </ul>
+        <p class="clause"><strong>6.2</strong> 在你确认购买前，我们会在购买页面展示商品名称、价格、服务期限、是否自动续费、取消或管理方式以及其他重要信息。如某项商品包含试用、优惠、促销或价格变更安排，以购买页面的明确说明为准。你完成购买确认后，相关交易将按照 Apple Media Services 条款、App Store 规则及适用法律法规处理。</p>
+        <p class="clause"><strong>6.3</strong> 会员购买由 Apple App Store 处理。Apple 负责支付、扣款、税费、订单凭证、订阅续期和退款审核等交易环节；趣游集会根据 Apple 返回或签发的交易信息，对订单进行必要的真实性校验，并在云端用户表中记录和更新会员状态。我们不会要求你提供 Apple 账户密码或完整的支付信息。</p>
+        <p class="clause"><strong>6.4</strong> 月度自动续费订阅会持续到当前订阅周期结束。你应按照 Apple 账户的订阅管理指引关闭自动续费；为避免下一周期扣款，通常应至少在当前周期结束前 24 小时完成取消，具体时间和扣款规则以 Apple 的最新规则为准。仅删除或卸载趣游集不会自动取消订阅。</p>
+        <p class="clause"><strong>6.5</strong> 一次性买断型永久会员不需要取消续费，也不会自动产生后续扣款。你在更换设备、重新安装应用或使用其他设备时，可能需要使用购买该项目的同一 Apple 账户，并通过应用内“恢复购买”功能恢复权益；是否支持家庭共享或跨设备使用，以购买页面和 Apple 规则为准。</p>
+        <p class="clause"><strong>6.6</strong> 退款申请应按照 Apple 的流程提交，例如通过 App Store 的订单支持或 Apple 官方问题报告渠道申请。退款是否批准、退款金额和到账时间由 Apple 依据其规则及适用法律法规审核决定。除法律法规另有规定或我们存在应承担的责任外，我们无法替代 Apple 取消扣款、直接决定退款或承诺退款结果。退款、撤销、拒付或交易失效后，对应会员权益可能被暂停或收回。</p>
+        <p class="clause"><strong>6.7</strong> 如果购买后会员权益未及时到账、恢复购买失败、订阅状态显示异常或发生重复扣款，请先确认使用的是正确的 Apple 账户并保留订单信息，再通过本协议末尾的邮箱联系我们。为完成核验，我们可能需要你提供订单号、交易时间、商品名称及必要的设备或用户标识，但不会要求你发送密码、验证码或完整支付凭证。</p>
+        <p class="clause"><strong>6.8</strong> 你不得伪造、篡改、重复使用、转让或以其他非法方式取得交易凭证、会员资格或恢复购买结果。对于欺诈、异常退款、恶意拒付、绕过验证或其他破坏交易安全的行为，我们可以暂停相关会员权益、限制账户功能，并依法保留追究责任的权利。</p>
+      </section>
+
+      <section class="section" id="privacy">
+        <h2 class="section-title">七、隐私与个人信息保护</h2>
+        <p class="clause"><strong>7.1</strong> 我们重视个人信息安全，并按照《隐私政策》处理你在使用趣游集过程中产生或主动提供的信息。除本地游戏数据外，为提供会员购买、订单核验、订阅状态同步、恢复购买、退款或撤销处理及客户服务，我们可能处理趣游集用户标识、Apple 交易标识（如 transactionId、originalTransactionId）、商品标识、购买时间、订阅到期时间、续费状态、退款或撤销状态等必要信息。我们不会保存你的 Apple 账户密码或完整支付卡信息。</p>
+        <p class="clause"><strong>7.2</strong> 当某项功能需要访问照片、文件、网络或其他系统能力时，我们会在相应场景说明用途并按照系统机制申请权限。你可以拒绝非必要权限；拒绝权限可能仅影响对应功能，不影响其他基础功能。具体信息类型、处理目的、保存方式、第三方服务和你的权利，以《隐私政策》为准。</p>
+        <p class="clause"><strong>7.3</strong> 会员相关的必要交易信息可能由趣游集云函数或云端用户表保存，用于核验 Apple 交易、识别会员有效期、处理续费或退款通知、支持恢复购买和防止重复或欺诈使用。我们会按照《隐私政策》说明处理目的、保存期限、访问权限、数据安全措施和你的个人信息权利；如处理范围发生重大变化，我们会依法更新隐私政策并采取合理方式提示。</p>
+      </section>
+
+      <section class="section" id="ip">
+        <h2 class="section-title">八、知识产权</h2>
+        <p class="clause"><strong>8.1</strong> 趣游集的程序代码、产品名称、图标、界面设计、游戏规则表达、题目素材、文字、音频、图像以及其他由我们或相关权利人提供的内容，依法受到著作权、商标权、专利权及其他知识产权保护。</p>
+        <p class="clause"><strong>8.2</strong> 在遵守本协议的前提下，我们授予你一项个人、非排他、不可转让、不可再许可的有限使用许可，仅用于在你拥有或控制的合法设备上使用趣游集。除法律明确允许或取得书面许可外，你不得复制、传播、改编、出租、出售、反向工程或制作衍生产品。</p>
+        <p class="clause"><strong>8.3</strong> 你合法拥有的昵称、反馈原始内容及通过系统分享产生的用户内容，其权利仍归你或原权利人所有。你不得借助趣游集实施侵害第三方权利的行为。</p>
+      </section>
+
+      <section class="section" id="changes">
+        <h2 class="section-title">九、服务变更、中断与终止</h2>
+        <p class="clause"><strong>9.1</strong> 我们可能因产品迭代、运营安排、法律政策、平台规则或安全风险调整游戏、功能、内容和技术方案。涉及你重要权益的重大变化，我们会通过应用内提示、页面公告或其他合理方式告知。</p>
+        <p class="clause"><strong>9.2</strong> 因系统维护、网络故障、设备环境、应用商店或第三方服务异常、不可抗力及其他合理原因，部分服务可能暂时中断或受到影响。我们会在可行范围内采取措施恢复服务并减少影响。</p>
+        <p class="clause"><strong>9.3</strong> 如果我们永久停止提供主要服务，会在法律要求的范围内提前通知，并根据适用法律法规和《隐私政策》处理相关个人信息、交易记录及其他数据。对于尚未到期的自动续费订阅或已购买但尚未完成处理的会员权益，我们会在法律允许的范围内按照 Apple 规则提供必要说明、协助处理或采取合理的补救措施；永久会员不意味着在服务永久停止后仍可要求我们继续提供已停止的服务。</p>
+      </section>
+
+      <section class="section" id="liability">
+        <h2 class="section-title">十、责任说明</h2>
+        <p class="clause"><strong>10.1</strong> 我们会采取合理的技术和管理措施保障服务稳定，但无法承诺应用始终无错误、不中断，或适用于每一台设备、每一种系统环境和每一位用户的特定目的。</p>
+        <p class="clause"><strong>10.2</strong> 在法律允许的范围内，因以下情形造成的损失由相应责任方依法承担：你未妥善保管设备或设备信息；你自行卸载应用、清除数据或设备损坏导致本地记录丢失；你违反法律法规或本协议；网络、系统、应用商店、第三方服务或不可抗力超出我们合理控制范围。</p>
+        <p class="clause"><strong>10.3</strong> 本协议不排除或限制你依据适用法律享有的消费者权利，也不排除任何依法不得排除或限制的责任。</p>
+      </section>
+
+      <section class="section" id="minor">
+        <h2 class="section-title">十一、未成年人保护</h2>
+        <p class="clause"><strong>11.1</strong> 未满18周岁的用户应在监护人阅读、指导并同意本协议后使用趣游集。未满14周岁的儿童应在监护人陪同和指导下使用，不应自行进行付费操作或向我们提交不必要的个人信息。</p>
+        <p class="clause"><strong>11.2</strong> 监护人应合理安排未成年人的使用时间，关注其游戏内容、分享行为、付费行为和个人信息保护。趣游集不能替代家庭教育、学校教育、医疗评估或监护人的陪伴。</p>
+        <p class="clause"><strong>11.3</strong> 如果你认为未成年人未经监护人同意使用服务或发生了不当付费，请通过本协议末尾的邮箱联系我们，并提供必要的订单或情况说明，以便我们在法律允许的范围内协助处理。</p>
+      </section>
+
+      <section class="section" id="close">
+        <h2 class="section-title">十二、停止使用与本地数据清除</h2>
+        <p class="clause"><strong>12.1</strong> 你可以在应用内“个人中心”使用“清除本地数据”功能，或通过系统设置清除应用数据。清除后，积分、游玩记录、游戏进度、昵称及相关本地缓存可能无法恢复。清除本地数据不会自动取消 Apple 月度订阅，也不当然删除为会员核验、订单处理和法律合规而保留的云端记录；云端数据的处理以《隐私政策》和适用法律法规为准。</p>
+        <p class="clause"><strong>12.2</strong> 卸载趣游集不等同于取消 Apple 月度自动续费订阅。你应在 Apple 账户的订阅管理页面关闭自动续费；一次性买断型永久会员不存在自动续费，但重新安装或更换设备时可能需要使用原购买 Apple 账户恢复权益。</p>
+        <p class="clause"><strong>12.3</strong> 如果你无法在应用内完成数据处理、会员权益核验、恢复购买、退款协助或其他请求，请通过本协议末尾的邮箱联系我们。我们会依据你的请求内容、必要的身份或交易核验结果、Apple 返回的交易状态及适用法律法规处理。</p>
+      </section>
+
+      <section class="section" id="update">
+        <h2 class="section-title">十三、协议更新</h2>
+        <p class="clause"><strong>13.1</strong> 我们可能因功能、业务、法律法规、平台规则或安全要求变化而更新本协议。更新后的版本会在本页面公布，并标注更新日期和生效日期。</p>
+        <p class="clause"><strong>13.2</strong> 如果更新对你的权利义务产生重大影响，我们会采用合理方式提示。你不同意更新内容的，可以停止使用相关服务；更新生效后继续使用的，视为接受更新后的协议。</p>
+      </section>
+
+      <section class="section" id="law">
+        <h2 class="section-title">十四、法律适用与争议解决</h2>
+        <p class="clause"><strong>14.1</strong> 本协议的订立、履行、解释及争议解决适用中华人民共和国法律；法律强制规定你所在地区法律适用的，从其规定。</p>
+        <p class="clause"><strong>14.2</strong> 因本协议产生争议，双方应先友好协商；协商不成的，任何一方均可依法向有管辖权的人民法院提起诉讼。你作为消费者依法享有的投诉、举报及其他救济权利不受影响。</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2 class="section-title">十五、联系我们与其他</h2>
+        <p class="clause"><strong>15.1</strong> 如你对本协议、产品功能、会员方案、Apple 购买、订阅取消、退款申请、恢复购买、会员状态同步、账户标识或本地数据处理有疑问，请联系我们：</p>
+        <div class="contact-box">
+          联系邮箱：<a href="mailto:913111480@qq.com">913111480@qq.com</a><br>
+          为保护你的安全，请不要通过邮件发送密码、短信验证码或完整的支付凭证。
+        </div>
+        <p class="clause"><strong>15.2</strong> 本协议的条款标题仅为阅读方便，不影响条款含义。部分条款被认定无效或不可执行的，不影响其他条款继续有效。</p>
+      </section>
+
+      <footer class="document-end">
+        <p>感谢你使用趣游集。</p>
+        <p>每一局，都是一次轻松的探索。</p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
