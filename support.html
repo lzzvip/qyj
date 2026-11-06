@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7f8">
+  <meta name="description" content="趣游集技术支持：客服电话、客服邮箱与常见问题解答。">
+  <title>趣游集技术支持</title>
+  <style>
+    :root {
+      --ink: #25323a;
+      --body: #4b5962;
+      --muted: #7d8b94;
+      --faint: #a2adb4;
+      --green: #4dae68;
+      --green-dark: #2f7247;
+      --green-soft: #edf8ef;
+      --yellow: #f1bd2d;
+      --yellow-soft: #fff8da;
+      --blue: #2b94d6;
+      --blue-soft: #eef8ff;
+      --rose: #80515c;
+      --rose-soft: #f7e8ed;
+      --page: #f4f6f7;
+      --line: #e9edef;
+      --paper: #ffffff;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--page);
+      color: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--green-dark);
+    }
+
+    .wrap {
+      width: min(100% - 32px, 860px);
+      margin: 0 auto;
+      padding: 36px 0 72px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 24px 34px;
+      border: 1px solid rgba(231, 236, 238, .96);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 18px 46px rgba(82, 103, 115, .09), 0 2px 8px rgba(82, 103, 115, .04);
+    }
+
+    .logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #e5f0f8, #e4f2e9);
+      padding: 8px;
+      object-fit: contain;
+      box-shadow: 0 12px 26px rgba(52, 97, 144, .14);
+    }
+
+    .kicker {
+      margin: 18px 0 0;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
+
+    h1 {
+      margin: 6px 0 0;
+      color: #1e292f;
+      font-size: clamp(26px, 4vw, 32px);
+      line-height: 1.4;
+      letter-spacing: .03em;
+    }
+
+    .slogan {
+      max-width: 520px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: #4d6c61;
+      font-size: 13px;
+    }
+
+    .tag.blue {
+      background: #e6eff6;
+      color: #4d6f87;
+    }
+
+    .card {
+      margin-top: 20px;
+      padding: 28px 30px;
+      border: 1px solid rgba(231, 236, 238, .96);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 18px 46px rgba(82, 103, 115, .09), 0 2px 8px rgba(82, 103, 115, .04);
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      color: #1e292f;
+      font-size: 20px;
+      line-height: 1.5;
+      letter-spacing: .02em;
+    }
+
+    .section-desc {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfcfc;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .contact-item:hover,
+    .contact-item:focus-visible {
+      border-color: #cfe3d4;
+      box-shadow: 0 8px 20px rgba(82, 103, 115, .08);
+      outline: none;
+    }
+
+    .contact-icon {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      background: var(--blue-soft);
+    }
+
+    .contact-icon.mail {
+      color: var(--rose);
+      background: var(--rose-soft);
+    }
+
+    .contact-icon.time {
+      color: var(--green-dark);
+      background: var(--green-soft);
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .contact-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contact-value {
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    .faq {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .faq li {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq li:first-child {
+      border-top: 0;
+      padding-top: 4px;
+    }
+
+    .faq h3 {
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .faq p {
+      margin: 0;
+      color: var(--body);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid #e0e6e9;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .78);
+      color: #50606a;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color .15s ease, color .15s ease;
+    }
+
+    .link-btn:hover,
+    .link-btn:focus-visible {
+      border-color: var(--green);
+      color: var(--green-dark);
+      outline: none;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--faint);
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+
+    .footer p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 520px) {
+      .wrap {
+        width: min(100% - 24px, 860px);
+        padding-top: 20px;
+      }
+
+      .hero {
+        padding: 32px 18px 28px;
+      }
+
+      .card {
+        padding: 22px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .contact-item,
+      .link-btn {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <img class="logo" src="static/logo.png" alt="趣游集应用图标">
+      <p class="kicker">技术支持</p>
+      <h1>趣游集</h1>
+      <p class="slogan">轻松开局，收藏每一刻专注与快乐</p>
+      <div class="tags">
+        <span class="tag">离线可玩</span>
+        <span class="tag blue">进度本地保存</span>
+        <span class="tag">本地轻游戏合集</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">联系我们</h2>
+      <p class="section-desc">遇到问题时，可通过以下方式联系客服，工作日 9:00-18:00 为你服务。</p>
+      <div class="contact-list">
+        <a class="contact-item" href="tel:+8618168419522">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">客服电话</span>
+            <span class="contact-value">+86 181 6841 9522</span>
+          </span>
+        </a>
+        <a class="contact-item" href="mailto:913111480@qq.com">
+          <span class="contact-icon mail" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">客服邮箱</span>
+            <span class="contact-value">913111480@qq.com</span>
+          </span>
+        </a>
+        <div class="contact-item">
+          <span class="contact-icon time" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">服务时间</span>
+            <span class="contact-value">工作日 9:00-18:00</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="faq-title">
+      <h2 id="faq-title">常见问题</h2>
+      <p class="section-desc">以下为玩家最常咨询的问题，若仍无法解决，欢迎通过上方方式联系我们。</p>
+      <ul class="faq">
+        <li>
+          <h3>游戏需要联网吗？</h3>
+          <p>趣游集内的小游戏均可离线游玩，无需网络连接即可开始游戏。登录、云反馈等功能需要联网使用。</p>
+        </li>
+        <li>
+          <h3>游戏进度保存在哪里？</h3>
+          <p>游戏进度默认保存在本机。卸载应用或清除应用数据会导致本地进度丢失，建议开启系统云备份或在设置中妥善保留数据。</p>
+        </li>
+        <li>
+          <h3>更换手机后进度会同步吗？</h3>
+          <p>当前版本进度以本地保存为主，更换设备后不会自动同步。如有账号相关需求，请联系客服协助处理。</p>
+        </li>
+        <li>
+          <h3>会员或订单出现问题怎么办？</h3>
+          <p>请在「我的 - 会员订单」中查看订单记录，并将订单信息、问题描述与截图发送至客服邮箱，我们会尽快核实处理。</p>
+        </li>
+        <li>
+          <h3>如何提交意见反馈？</h3>
+          <p>进入「我的 - 意见反馈」，填写问题描述与联系方式即可提交。登录后反馈会提交到云端，便于我们跟进处理。</p>
+        </li>
+        <li>
+          <h3>游戏闪退或运行卡顿怎么办？</h3>
+          <p>请先尝试重启应用、清理后台程序并确认系统版本已更新。若问题持续，请通过客服邮箱提供机型、系统版本与问题描述。</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>趣游集 · 本地轻游戏合集</p>
+      <p>© 2026 趣游集 保留所有权利</p>
+    </footer>
+  </main>
+</body>
+</html>
